@@ -1,21 +1,27 @@
 import React from 'react';
-import Hero from './components/Hero';
-import Rooms from './components/Rooms';
-import Amenities from './components/Amenities';
-import Experience from './components/Experience';
-import Booking from './components/Booking';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import AdminDashboard from './pages/AdminDashboard';
+import UserDashboard from './pages/UserDashboard';
+import RoomsPage from './pages/RoomsPage';
+import BookingPage from './pages/BookingPage';
 
 function App() {
   return (
-    <main className="app-container">
-      <Hero />
-      <Rooms />
-      <Amenities />
-      <Experience />
-      <Booking />
-      <Footer />
-    </main>
+    <div className="app-wrapper">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/user" element={<UserDashboard />} />
+        <Route path="/rooms" element={<RoomsPage />} />
+        <Route path="/book/:id" element={<BookingPage />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 
