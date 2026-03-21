@@ -34,7 +34,7 @@ const RoomsPage = () => {
               <h3>{room.title}</h3>
               <p className="room-desc">{room.description}</p>
               <div className="room-bottom">
-                <span className="room-price">${room.price} <small>/ night</small></span>
+                <span className="room-price">₹{room.price} <small>/ night</small></span>
                 <button 
                   className="book-btn"
                   disabled={room.status !== 'available'}

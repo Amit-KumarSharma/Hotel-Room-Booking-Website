@@ -8,10 +8,10 @@ import './Rooms.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const roomsData = [
-  { id: 1, name: 'The Belvedere Suite', price: '$1,200/night', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop' },
-  { id: 2, name: 'Royal Penthouse', price: '$3,500/night', image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop' },
-  { id: 3, name: 'Ocean View Room', price: '$800/night', image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop' },
-  { id: 4, name: 'Classic Elegance', price: '$500/night', image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2070&auto=format&fit=crop' },
+  { id: 1, name: 'The Belvedere Suite', price: '₹96,000/night', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop' },
+  { id: 2, name: 'Royal Penthouse', price: '₹2,80,000/night', image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop' },
+  { id: 3, name: 'Ocean View Room', price: '₹64,000/night', image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop' },
+  { id: 4, name: 'Classic Elegance', price: '₹40,000/night', image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2070&auto=format&fit=crop' },
 ];
 
 const Rooms = () => {

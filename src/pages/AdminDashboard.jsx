@@ -46,7 +46,7 @@ const AdminDashboard = () => {
                   {rooms.map(room => (
                     <tr key={room.id}>
                       <td>{room.title}</td>
-                      <td>${room.price}/night</td>
+                      <td>₹{room.price}/night</td>
                       <td>
                         <span className={`status-badge ${room.status}`}>
                           {room.status}

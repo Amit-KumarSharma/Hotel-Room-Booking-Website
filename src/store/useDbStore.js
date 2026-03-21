@@ -2,9 +2,9 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 const initialRooms = [
-  { id: '1', title: 'Presidential Suite', description: 'Ultimate luxury with panoramic views', price: 1500, status: 'available', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80' },
-  { id: '2', title: 'Ocean View Room', description: 'Breathtaking ocean vistas', price: 800, status: 'available', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80' },
-  { id: '3', title: 'Deluxe Suite', description: 'Spacious and elegant accommodation', price: 500, status: 'available', image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80' }
+  { id: '1', title: 'Presidential Suite', description: 'Ultimate luxury with panoramic views', price: 120000, status: 'available', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80' },
+  { id: '2', title: 'Ocean View Room', description: 'Breathtaking ocean vistas', price: 64000, status: 'available', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80' },
+  { id: '3', title: 'Deluxe Suite', description: 'Spacious and elegant accommodation', price: 40000, status: 'available', image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80' }
 ];
 
 export const useDbStore = create(

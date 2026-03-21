@@ -7,6 +7,7 @@ import './Login.css';
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
+  const [fullName, setFullName] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -25,11 +26,11 @@ const Login = () => {
           setError('Invalid credentials. Use admin@hotel.com/admin or any email/password.');
         }
       } else {
-        if (email && password.length >= 6) {
-          signup(email, password);
+        if (email && password.length >= 6 && fullName) {
+          signup(fullName, email, password);
           navigate('/user');
         } else {
-          setError('Please enter a valid email and password (min 6 chars).');
+          setError('Please fill in all fields (password min 6 chars).');
         }
       }
     }, 500);
@@ -51,6 +52,20 @@ const Login = () => {
         
         <form onSubmit={handleSubmit} className="login-form">
           {error && <div className="error-message">{error}</div>}
+          
+          {!isLogin && (
+            <div className="form-group">
+              <label>Full Name</label>
+              <input 
+                type="text" 
+                required 
+                placeholder="Enter your full name" 
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="luxury-input"
+              />
+            </div>
+          )}
           
           <div className="form-group">
             <label>Email Address</label>

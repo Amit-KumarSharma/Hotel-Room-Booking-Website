@@ -53,7 +53,7 @@ const BookingPage = () => {
       >
         <div className="login-header">
           <h2>Complete Your Booking</h2>
-          <p>You are booking the <strong>{room.title}</strong> for ${room.price}/night.</p>
+          <p>You are booking the <strong>{room.title}</strong> for ₹{room.price}/night.</p>
         </div>
         
         <form onSubmit={handleBooking} className="login-form">

@@ -51,7 +51,7 @@ const Navbar = () => {
                 </li>
               )}
               <li className="nav-item nav-user">
-                <span className="user-greeting">Hi, {user.email.split('@')[0]}</span>
+                <span className="user-greeting">Hi, {user.name || user.email.split('@')[0]}</span>
                 <button className="logout-btn" onClick={handleLogout}>Logout</button>
               </li>
             </>
