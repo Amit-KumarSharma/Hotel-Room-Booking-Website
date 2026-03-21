@@ -43,7 +43,7 @@ const Hero = () => {
       <video 
         className="hero-bg" 
         ref={bgRef} 
-        src="/hero_video.mp4" 
+        src={`${import.meta.env.BASE_URL}hero_video.mp4`} 
         autoPlay 
         muted 
         loop 
