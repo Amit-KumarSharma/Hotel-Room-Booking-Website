@@ -1,0 +1,73 @@
+.amenities-section {
+  background-color: var(--color-black);
+  padding: 15vh 0;
+  position: relative;
+  z-index: 2;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+.amenities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+}
+
+.amenity-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10%;
+}
+
+.amenity-item.reversed {
+  direction: rtl; /* simple way to reverse layout visually */
+}
+
+.amenity-item.reversed > * {
+  direction: ltr; /* reset content direction */
+}
+
+.amenity-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.amenity-image {
+  position: absolute;
+  top: -15%; /* allow room for parallax to go up/down */
+  left: 0;
+  width: 100%;
+  height: 130%; /* taller than wrapper for parallax */
+  object-fit: cover;
+  will-change: transform;
+}
+
+.amenity-content h3 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.amenity-content p {
+  font-family: var(--font-primary);
+  color: var(--color-light-gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .amenity-item {
+    gap: 3rem;
+  }
+  .amenity-item, .amenity-item.reversed {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+}
